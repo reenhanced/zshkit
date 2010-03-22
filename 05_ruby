@@ -1,1 +1,22 @@
 alias irb='irb --readline -r irb/completion'
+
+# http://www.metaskills.net/2009/1/20/multiruby-the-macports-way-testing-your-rails-apps-with-ruby-1-9
+chruby () {
+  ree=`ruby -e "puts RUBY_DESCRIPTION.include?('Ruby Enterprise Edition')"`
+  if [ $ree = "true" ]; then 
+    echo "NOOP: Currently using REE in your path."
+  else
+    v=`ruby -e "puts RUBY_VERSION.split('.')[0,2].join('.')"`
+    if [ $v = "1.9" ]; then 
+      cv="1.8"
+    else
+      cv="1.9"
+    fi
+    rubyexes=(erb gem irb rake rdoc ri ruby testrb autotest unit_diff rails)
+    for i in $rubyexes; do
+      sudo unlink "/opt/local/bin/${i}"
+      sudo ln -s "/opt/local/bin/${i}${cv}" "/opt/local/bin/${i}"
+    done
+    echo "Now Running: "`ruby -v`
+  fi
+}
