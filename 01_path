@@ -9,6 +9,7 @@ pathdirs=(/Library/Frameworks/Python.framework/Versions/Current/bin
         /var/lib/gems/1.9.1/bin
         /opt/local/bin
         /opt/local/apache2/bin
+        /opt/local/lib/postgresql83/bin
         ~/bin )
 
 for dir ($pathdirs)
@@ -16,7 +17,7 @@ for dir ($pathdirs)
     path=($dir $path) 
   fi
 
-cdpath=(~ ~/Projects ~/Work)
+cdpath=(~ ~/projects ~/work)
 
 # Allow MacPorts man pages and others
 dirs=( /usr/local/git/man 

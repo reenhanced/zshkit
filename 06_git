@@ -97,4 +97,6 @@ if [[ -x `which git` ]]; then
     git checkout master
     else
     git checkout $1
+  fi
+  }
 fi
