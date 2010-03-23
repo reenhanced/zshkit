@@ -6,7 +6,9 @@ pathdirs=(/Library/Frameworks/Python.framework/Versions/Current/bin
         /usr/local/git/bin 
         /usr/local/libexec/git-core  
         /var/lib/gems/1.8/bin
-        /opt/local/bin 
+        /var/lib/gems/1.9.1/bin
+        /opt/local/bin
+        /opt/local/apache2/bin
         ~/bin )
 
 for dir ($pathdirs)
@@ -52,6 +54,6 @@ typeset -gU path cdpath manpath fpath
 # A few named directories cd by doing cd ~D etc.
 D=~/Documents
 DL=~/Downloads
-P=~/Projects
+P=~/projects
 W=~/work
-Z=~/Projects/zshkit
+Z=~/.zshkit

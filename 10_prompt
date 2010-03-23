@@ -1,4 +1,7 @@
 setopt prompt_subst
 
 # Set up my prompt.
-autoload promptinit && promptinit && prompt minimal_vcs
+# autoload promptinit && promptinit && prompt minimal_vcs
+
+PROMPT='%{$reset_color%}%B%n%b@%m %~`git-prompt`%(!.#.>) '
+
