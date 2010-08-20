@@ -9,7 +9,8 @@ pathdirs=(/Library/Frameworks/Python.framework/Versions/Current/bin
         /var/lib/gems/1.9.1/bin
         /opt/local/bin
         /opt/local/apache2/bin
-        /opt/local/lib/postgresql83/bin
+        /opt/local/lib/postgresql84/bin
+				/usr/local/sbin
         ~/bin )
 
 for dir ($pathdirs)
@@ -50,11 +51,6 @@ for dir ($funcdirs)
     fpath=($fpath $dir) 
   fi
 
-typeset -gU path cdpath manpath fpath
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-# A few named directories cd by doing cd ~D etc.
-D=~/Documents
-DL=~/Downloads
-P=~/projects
-W=~/work
-Z=~/.zshkit
+typeset -gU path cdpath manpath fpath

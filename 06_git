@@ -19,7 +19,7 @@ if [[ -x `which git` ]]; then
 	function gsrb () {
 		branch=$(git-branch-name) 
 		git checkout master
-		git svn rebase
+    git svn rebase
 		git checkout "${branch}"
 		git rebase master
 	}
