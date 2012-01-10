@@ -1,6 +1,5 @@
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
-alias mysql='mysql5'
+alias mysqlstart='sudo /usr/local/bin/mysqld_safe &'
+alias mysqlstop='/usr/local/bin/mysqladmin -u root -p shutdown'
 
 export MYSQL_HOME=/usr/local/mysql
 

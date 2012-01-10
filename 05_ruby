@@ -30,3 +30,5 @@ chruby () {
     echo "Now Running: "`ruby -v`
   fi
 }
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
